@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Puzzle</title>
+</head>
+
+<body>
+
+    <div class="login-window none">
+        <div class="login-info">The password should contain at least 8 characters, at least 1 digit, 1 uppercase 
+            and 1 lowercase letters and 1 of the following symbols +-_@$!%*?&#.,;:[]{}
+        </div>
+        <form class="login">
+            <input id="input-email" type="text" placeholder="Email" required autocomplete="off" >
+            <input id="input-password" type="password" placeholder="Password" required autocomplete="off">
+            <button class="login-btn">Log In</button>
+        </form>
+    </div>
+
+    <div class="start">
+        <h1>english puzzle</h1>
+        <p class="start__info">Click on words, collect phrases.<br>
+            You can drag and drop the words.</p>
+        <button class="btn start__btn">start</button>
+    </div>
+    <header class="header">
+    <button class="btn log-out">Log Out</button>
+        <form class="form" action="" method="GET">
+            <input class="form__level" type="text" autocomplete="off" placeholder="level">
+            <input class="form__round" type="text" autocomplete="off" placeholder="round">
+            <button class="btn form__btn">go!</button>
+        </form>
+        <div class="info" ></div>
+        <div class="hints">
+            <button class="btn hints__sentence">
+                <span class="tooltiptext">Listen to the sentence</span>
+                <img src="./src/assets/audioTranslation.png" class="icon" alt="audioTranslation"></img>
+            </button>
+            <button class="btn hints__translation">
+                <span class="tooltiptext">Get the translation</span>
+                <img src="./src/assets/translation.png" class="icon" alt="translation"></img>
+            </button>
+            <button class="btn hints__word">
+                <span class="tooltiptext">Listen to the word</span>
+                <img src="./src/assets/audioWord.png" class="icon" alt="audioWord"></img>
+            </button>
+            <button class="btn hints__image">
+                <span class="tooltiptext">See the picture</span>
+                <img src="./src/assets/image.png" class="icon" alt="image"></img>
+            </button>
+        </div>
+    </header>
+    <main class="main">
+        <button class="btn auto-speech">
+            <span class="tooltiptext">Pronounces the sentence automatically when it's put in the right order</span>
+            <img src="./src/assets/audioTranslation.png" class="icon" alt="auto-speech"></img>
+        </button>
+        <div class="translation"></div>
+        <div class="results-sentences">
+        </div>
+        <div class="sentence-to-guess"></div>
+        <div class="btn-container">
+            <button class="btn continue-btn none">Continue</button>
+            <button class="btn check-btn none">Check</button>
+            <button class="btn dont-know-btn">I don't know</button>
+            <button class="btn results-btn none">Results</button>
+        </div>
+        <div class="results none">
+            <div class="results-container">
+                <div class="picture-mini final-image"></div>
+                <div>Моне Клод Оскар – Красные лодки в Аржантее, 1875.</div>
+                <p class="errors">I don't know
+                    <span class="errors-number"></span>
+                </p>
+                <div class="error-items">
+                </div>
+                <p class="success">I know
+                    <span class="success-number"></span>
+                </p>
+                <div class="success-items">
+                </div>
+                <div class="results--btns">
+                    <button id="results-continue-btn" class="btn">Continue</button>
+                    <button class="btn stats-btn">Statistics</button>
+                </div>
+            </div>
+        </div>
+        <div class="stats none">
+            <button id="stats-continue-btn" class="btn">Continue</button>
+            <div class="stats-container"></div>
+        </div>
+    </main>
+</body>
+
+</html>
